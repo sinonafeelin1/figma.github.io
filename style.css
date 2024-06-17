@@ -1,0 +1,2825 @@
+#report {
+  font-size: 15px; /* Установить размер текста 15px */
+  max-height: 70px;
+  overflow: auto;
+  margin-top: 5px;
+  padding-left: 30px;
+}
+
+#start-work {
+  color: rgb(250, 234, 216);
+  font-size: 20px;
+  background-color: #7e5a49;
+  cursor: pointer;
+  border-radius:  8px;
+  display: inline-block;
+}
+
+#end-work {
+  color: rgb(250, 234, 216);
+  font-size: 20px;
+  background-color: #7e5a49;
+  cursor: pointer;
+  border-radius:  8px;
+  display: inline-block;
+}
+
+#generate-report-day {
+  color: rgb(250, 234, 216);
+  font-size: 20px;
+  background-color: #7e5a49;
+  cursor: pointer;
+  border-radius:  8px;
+  display: inline-block;
+}
+
+#generate-report-week {
+  color: rgb(250, 234, 216);
+  font-size: 20px;
+  
+  background-color: #7e5a49;
+  cursor: pointer;
+  border-radius:  8px;
+  display: inline-block;
+}
+
+#start-timer {
+  color: rgb(250, 234, 216);
+  font-size: 23px;
+  padding-top: 21px;
+}
+
+#end-timer {
+  color: rgb(250, 234, 216);
+  font-size: 23px;
+  padding-bottom: 21px;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  
+}
+
+.container {
+  height: 100px;
+  overflow: auto;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.time-tracking {
+
+  margin-bottom: 20px;
+}
+
+.time-tracking label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.time-tracking input {
+  margin-bottom: 10px;
+}
+
+.report {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.calculate-screen {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.calculate-screen .div {
+  background-color: #ffffff;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #000000;
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+}
+
+.calculate-screen .fotor-ai {
+  position: absolute;
+  width: 736px;
+  height: 1080px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.calculate-screen .view {
+  top: 427px;
+  position: absolute;
+  width: 290px;
+  height: 67px;
+  left: 180px;
+}
+
+.calculate-screen .overlap-group {
+  position: relative;
+  height: 67px;
+}
+
+.calculate-screen .frame {
+  position: absolute;
+  width: 250px;
+  height: 60px;
+  top: 4px;
+  left: 21px;
+  background-color: #b4a695;
+  border-radius: 5.85px;
+}
+
+.calculate-screen .group-wrapper {
+  position: absolute;
+  width: 290px;
+  height: 67px;
+  top: 0;
+  left: 0;
+}
+
+.calculate-screen .group {
+  position: relative;
+  width: 292px;
+  height: 67px;
+}
+
+.calculate-screen .text-wrapper {
+  position: absolute;
+  width: 290px;
+  height: 67px;
+  top: 0;
+  left: 0;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.calculate-screen .overlap-wrapper {
+  top: 540px;
+  position: absolute;
+  width: 290px;
+  height: 67px;
+  left: 180px;
+}
+
+.calculate-screen .rectangle {
+  position: absolute;
+  width: 1918px;
+  height: 81px;
+  top: 1px;
+  left: 1px;
+  background-color: #e2d5c6;
+}
+
+.calculate-screen .rectangle-2 {
+  position: absolute;
+  width: 1918px;
+  height: 81px;
+  top: 4px;
+  left: -1px;
+  background-color: #e2d5c6;
+}
+
+.calculate-screen .rectangle-3 {
+  position: absolute;
+  width: 1918px;
+  height: 8px;
+  top: 81px;
+  left: 1px;
+  background-color: #b4a695;
+}
+
+.calculate-screen .rectangle-4 {
+  position: absolute;
+  width: 101px;
+  height: 80px;
+  top: 1px;
+  left: 809px;
+  background-color: #af6262;
+}
+
+.calculate-screen .rectangle-5 {
+  position: absolute;
+  width: 101px;
+  height: 80px;
+  top: 1px;
+  left: 1819px;
+  background-color: #af6262;
+}
+
+.calculate-screen .rectangle-6 {
+  position: absolute;
+  width: 101px;
+  height: 80px;
+  top: 1px;
+  left: 1617px;
+  background-color: #af6262;
+}
+
+.calculate-screen .rectangle-7 {
+  position: absolute;
+  width: 101px;
+  height: 80px;
+  top: 1px;
+  left: 1415px;
+  background-color: #af6262;
+}
+
+.calculate-screen .rectangle-8 {
+  position: absolute;
+  width: 101px;
+  height: 80px;
+  top: 1px;
+  left: 1213px;
+  background-color: #af6262;
+}
+
+.calculate-screen .rectangle-9 {
+  position: absolute;
+  width: 101px;
+  height: 80px;
+  top: 1px;
+  left: 1011px;
+  background-color: #af6262;
+}
+
+.calculate-screen .rectangle-10 {
+  position: absolute;
+  width: 101px;
+  height: 80px;
+  top: 1px;
+  left: 607px;
+  background-color: #af6262;
+}
+
+.calculate-screen .rectangle-11 {
+  position: absolute;
+  width: 101px;
+  height: 80px;
+  top: 1px;
+  left: 405px;
+  background-color: #af6262;
+}
+
+.calculate-screen .rectangle-12 {
+  position: absolute;
+  width: 101px;
+  height: 8px;
+  top: 81px;
+  left: 405px;
+  background-color: #915050;
+}
+
+.calculate-screen .rectangle-13 {
+  position: absolute;
+  width: 101px;
+  height: 80px;
+  top: 1px;
+  left: 203px;
+  background-color: #af6262;
+  mix-blend-mode: darken;
+}
+
+.calculate-screen .rectangle-14 {
+  position: absolute;
+  width: 101px;
+  height: 8px;
+  top: 81px;
+  left: 203px;
+  background-color: #915050;
+}
+
+.calculate-screen .rectangle-15 {
+  position: absolute;
+  width: 101px;
+  height: 80px;
+  top: 1px;
+  left: 1px;
+  background-color: #af6262;
+  mix-blend-mode: darken;
+}
+
+.calculate-screen .rectangle-16 {
+  position: absolute;
+  width: 101px;
+  height: 8px;
+  top: 81px;
+  left: 1px;
+  background-color: #915050;
+  mix-blend-mode: darken;
+}
+
+.calculate-screen .rectangle-17 {
+  position: absolute;
+  width: 101px;
+  height: 8px;
+  top: 81px;
+  left: 607px;
+  background-color: #915050;
+}
+
+.calculate-screen .rectangle-18 {
+  position: absolute;
+  width: 101px;
+  height: 8px;
+  top: 81px;
+  left: 809px;
+  background-color: #915050;
+}
+
+.calculate-screen .rectangle-19 {
+  position: absolute;
+  width: 101px;
+  height: 8px;
+  top: 81px;
+  left: 1213px;
+  background-color: #915050;
+}
+
+.calculate-screen .rectangle-20 {
+  position: absolute;
+  width: 101px;
+  height: 8px;
+  top: 81px;
+  left: 1415px;
+  background-color: #915050;
+}
+
+.calculate-screen .rectangle-21 {
+  position: absolute;
+  width: 101px;
+  height: 8px;
+  top: 81px;
+  left: 1617px;
+  background-color: #915050;
+}
+
+.calculate-screen .rectangle-22 {
+  position: absolute;
+  width: 101px;
+  height: 8px;
+  top: 81px;
+  left: 1819px;
+  background-color: #915050;
+}
+
+.calculate-screen .line {
+  width: 56px;
+  height: 1px;
+  top: 1073px;
+  left: 1858px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.calculate-screen .img {
+  width: 1px;
+  height: 56px;
+  top: 1018px;
+  left: 1913px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.calculate-screen .line-2 {
+  width: 55px;
+  height: 1px;
+  top: 1072px;
+  left: 1858px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.calculate-screen .vector {
+  position: absolute;
+  width: 53px;
+  height: 5px;
+  top: 1066px;
+  left: 1857px;
+}
+
+.calculate-screen .vector-2 {
+  position: absolute;
+  width: 7px;
+  height: 11px;
+  top: 1056px;
+  left: 1860px;
+}
+
+.calculate-screen .vector-3 {
+  position: absolute;
+  width: 7px;
+  height: 11px;
+  top: 1056px;
+  left: 1884px;
+}
+
+.calculate-screen .vector-4 {
+  position: absolute;
+  width: 11px;
+  height: 7px;
+  top: 1047px;
+  left: 1896px;
+}
+
+.calculate-screen .vector-5 {
+  position: absolute;
+  width: 11px;
+  height: 7px;
+  top: 1021px;
+  left: 1896px;
+}
+
+.calculate-screen .vector-6 {
+  position: absolute;
+  width: 5px;
+  height: 52px;
+  top: 1018px;
+  left: 1906px;
+}
+
+.calculate-screen .vector-7 {
+  position: absolute;
+  width: 11px;
+  height: 10px;
+  top: 1052px;
+  left: 1859px;
+}
+
+.calculate-screen .vector-8 {
+  position: absolute;
+  width: 9px;
+  height: 8px;
+  top: 1053px;
+  left: 1883px;
+}
+
+.calculate-screen .vector-9 {
+  position: absolute;
+  width: 8px;
+  height: 10px;
+  top: 1019px;
+  left: 1892px;
+}
+
+.calculate-screen .vector-10 {
+  position: absolute;
+  width: 8px;
+  height: 10px;
+  top: 1045px;
+  left: 1892px;
+}
+
+.calculate-screen .vector-11 {
+  position: absolute;
+  width: 6px;
+  height: 5px;
+  top: 1047px;
+  left: 1866px;
+}
+
+.calculate-screen .vector-12 {
+  position: absolute;
+  width: 4px;
+  height: 8px;
+  top: 1037px;
+  left: 1862px;
+}
+
+.calculate-screen .vector-13 {
+  position: absolute;
+  width: 5px;
+  height: 7px;
+  top: 1028px;
+  left: 1862px;
+}
+
+.calculate-screen .vector-14 {
+  position: absolute;
+  width: 8px;
+  height: 5px;
+  top: 1023px;
+  left: 1867px;
+}
+
+.calculate-screen .vector-15 {
+  position: absolute;
+  width: 9px;
+  height: 3px;
+  top: 1022px;
+  left: 1877px;
+}
+
+.calculate-screen .vector-16 {
+  position: absolute;
+  width: 6px;
+  height: 7px;
+  top: 1026px;
+  left: 1886px;
+}
+
+.calculate-screen .vector-17 {
+  position: absolute;
+  width: 3px;
+  height: 9px;
+  top: 1034px;
+  left: 1892px;
+}
+
+.calculate-screen .vector-18 {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 1044px;
+  left: 1886px;
+}
+
+.calculate-screen .vector-19 {
+  position: absolute;
+  width: 10px;
+  height: 3px;
+  top: 1051px;
+  left: 1875px;
+}
+
+.calculate-screen .vector-20 {
+  position: absolute;
+  width: 4px;
+  height: 2px;
+  top: 1037px;
+  left: 1862px;
+}
+
+.calculate-screen .vector-21 {
+  position: absolute;
+  width: 4px;
+  height: 3px;
+  top: 1042px;
+  left: 1863px;
+}
+
+.calculate-screen .vector-22 {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 1045px;
+  left: 1866px;
+}
+
+.calculate-screen .vector-23 {
+  position: absolute;
+  width: 3px;
+  height: 4px;
+  top: 1049px;
+  left: 1870px;
+}
+
+.calculate-screen .vector-24 {
+  position: absolute;
+  width: 2px;
+  height: 5px;
+  top: 1049px;
+  left: 1875px;
+}
+
+.calculate-screen .vector-25 {
+  position: absolute;
+  width: 3px;
+  height: 4px;
+  top: 1049px;
+  left: 1882px;
+}
+
+.calculate-screen .vector-26 {
+  position: absolute;
+  width: 3px;
+  height: 4px;
+  top: 1047px;
+  left: 1885px;
+}
+
+.calculate-screen .vector-27 {
+  position: absolute;
+  width: 4px;
+  height: 3px;
+  top: 1043px;
+  left: 1888px;
+}
+
+.calculate-screen .vector-28 {
+  position: absolute;
+  width: 4px;
+  height: 3px;
+  top: 1040px;
+  left: 1889px;
+}
+
+.calculate-screen .vector-29 {
+  position: absolute;
+  width: 5px;
+  height: 2px;
+  top: 1034px;
+  left: 1889px;
+}
+
+.calculate-screen .vector-30 {
+  position: absolute;
+  width: 5px;
+  height: 2px;
+  top: 1031px;
+  left: 1887px;
+}
+
+.calculate-screen .vector-31 {
+  position: absolute;
+  width: 4px;
+  height: 3px;
+  top: 1026px;
+  left: 1885px;
+}
+
+.calculate-screen .vector-32 {
+  position: absolute;
+  width: 3px;
+  height: 4px;
+  top: 1024px;
+  left: 1882px;
+}
+
+.calculate-screen .vector-33 {
+  position: absolute;
+  width: 3px;
+  height: 5px;
+  top: 1022px;
+  left: 1876px;
+}
+
+.calculate-screen .vector-34 {
+  position: absolute;
+  width: 3px;
+  height: 4px;
+  top: 1023px;
+  left: 1873px;
+}
+
+.calculate-screen .vector-35 {
+  position: absolute;
+  width: 5px;
+  height: 4px;
+  top: 1026px;
+  left: 1867px;
+}
+
+.calculate-screen .vector-36 {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 1028px;
+  left: 1865px;
+}
+
+.calculate-screen .vector-37 {
+  position: absolute;
+  width: 5px;
+  height: 2px;
+  top: 1033px;
+  left: 1862px;
+}
+
+.calculate-screen .vector-38 {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 1029px;
+  left: 1867px;
+}
+
+.calculate-screen .vector-39 {
+  position: absolute;
+  width: 5px;
+  height: 2px;
+  top: 1025px;
+  left: 1874px;
+}
+
+.calculate-screen .vector-40 {
+  position: absolute;
+  width: 4px;
+  height: 3px;
+  top: 1026px;
+  left: 1882px;
+}
+
+.calculate-screen .vector-41 {
+  position: absolute;
+  width: 4px;
+  height: 2px;
+  top: 1034px;
+  left: 1887px;
+}
+
+.calculate-screen .vector-42 {
+  position: absolute;
+  width: 2px;
+  height: 4px;
+  top: 1031px;
+  left: 1887px;
+}
+
+.calculate-screen .vector-43 {
+  position: absolute;
+  width: 3px;
+  height: 5px;
+  top: 1040px;
+  left: 1888px;
+}
+
+.calculate-screen .vector-44 {
+  position: absolute;
+  width: 5px;
+  height: 4px;
+  top: 1046px;
+  left: 1882px;
+}
+
+.calculate-screen .vector-45 {
+  position: absolute;
+  width: 5px;
+  height: 3px;
+  top: 1049px;
+  left: 1871px;
+}
+
+.calculate-screen .vector-46 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 1042px;
+  left: 1865px;
+}
+
+.calculate-screen .vector-47 {
+  position: absolute;
+  width: 2px;
+  height: 5px;
+  top: 1034px;
+  left: 1865px;
+}
+
+.calculate-screen .vector-48 {
+  position: absolute;
+  width: 3px;
+  height: 4px;
+  top: 1028px;
+  left: 1872px;
+}
+
+.calculate-screen .vector-49 {
+  position: absolute;
+  width: 3px;
+  height: 5px;
+  top: 1027px;
+  left: 1878px;
+}
+
+.calculate-screen .vector-50 {
+  position: absolute;
+  width: 5px;
+  height: 4px;
+  top: 1030px;
+  left: 1882px;
+}
+
+.calculate-screen .vector-51 {
+  position: absolute;
+  width: 6px;
+  height: 2px;
+  top: 1037px;
+  left: 1882px;
+}
+
+.calculate-screen .vector-52 {
+  position: absolute;
+  width: 5px;
+  height: 4px;
+  top: 1041px;
+  left: 1882px;
+}
+
+.calculate-screen .vector-53 {
+  position: absolute;
+  width: 2px;
+  height: 6px;
+  top: 1043px;
+  left: 1878px;
+}
+
+.calculate-screen .vector-54 {
+  position: absolute;
+  width: 3px;
+  height: 5px;
+  top: 1042px;
+  left: 1871px;
+}
+
+.calculate-screen .vector-55 {
+  position: absolute;
+  width: 5px;
+  height: 2px;
+  top: 1039px;
+  left: 1868px;
+}
+
+.calculate-screen .vector-56 {
+  position: absolute;
+  width: 5px;
+  height: 3px;
+  top: 1033px;
+  left: 1868px;
+}
+
+.calculate-screen .vector-57 {
+  position: absolute;
+  width: 4px;
+  height: 1px;
+  top: 1037px;
+  left: 1868px;
+}
+
+.calculate-screen .vector-58 {
+  position: absolute;
+  width: 3px;
+  height: 2px;
+  top: 1031px;
+  left: 1870px;
+}
+
+.calculate-screen .vector-59 {
+  position: absolute;
+  width: 1px;
+  height: 3px;
+  top: 1028px;
+  left: 1876px;
+}
+
+.calculate-screen .vector-60 {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  top: 1029px;
+  left: 1881px;
+}
+
+.calculate-screen .vector-61 {
+  position: absolute;
+  width: 4px;
+  height: 1px;
+  top: 1035px;
+  left: 1883px;
+}
+
+.calculate-screen .vector-62 {
+  position: absolute;
+  width: 5px;
+  height: 2px;
+  top: 1039px;
+  left: 1882px;
+}
+
+.calculate-screen .vector-63 {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 1042px;
+  left: 1880px;
+}
+
+.calculate-screen .vector-64 {
+  position: absolute;
+  width: 2px;
+  height: 4px;
+  top: 1043px;
+  left: 1875px;
+}
+
+.calculate-screen .vector-65 {
+  position: absolute;
+  width: 4px;
+  height: 3px;
+  top: 1041px;
+  left: 1869px;
+}
+
+.calculate-screen .vector-66 {
+  position: absolute;
+  width: 1px;
+  height: 3px;
+  top: 1036px;
+  left: 1891px;
+}
+
+.calculate-screen .vector-67 {
+  position: absolute;
+  width: 2px;
+  height: 3px;
+  top: 1039px;
+  left: 1864px;
+}
+
+.calculate-screen .vector-68 {
+  position: absolute;
+  width: 3px;
+  height: 2px;
+  top: 1026px;
+  left: 1870px;
+}
+
+.calculate-screen .vector-69 {
+  position: absolute;
+  width: 4px;
+  height: 2px;
+  top: 1050px;
+  left: 1878px;
+}
+
+.calculate-screen .vector-70 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1042px;
+  left: 1894px;
+}
+
+.calculate-screen .vector-71 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1035px;
+  left: 1895px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-72 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1046px;
+  left: 1892px;
+}
+
+.calculate-screen .vector-73 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1051px;
+  left: 1888px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-74 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1055px;
+  left: 1875px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-75 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1053px;
+  left: 1869px;
+}
+
+.calculate-screen .vector-76 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1050px;
+  left: 1865px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-77 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1045px;
+  left: 1861px;
+}
+
+.calculate-screen .vector-78 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1038px;
+  left: 1859px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-79 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1033px;
+  left: 1860px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-80 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1027px;
+  left: 1863px;
+}
+
+.calculate-screen .vector-81 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1025px;
+  left: 1866px;
+}
+
+.calculate-screen .vector-82 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1021px;
+  left: 1873px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-83 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1021px;
+  left: 1877px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-84 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1022px;
+  left: 1885px;
+}
+
+.calculate-screen .vector-85 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1024px;
+  left: 1888px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-86 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1030px;
+  left: 1893px;
+}
+
+.calculate-screen .vector-87 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1050px;
+  left: 1903px;
+}
+
+.calculate-screen .vector-88 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1024px;
+  left: 1903px;
+}
+
+.calculate-screen .vector-89 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1063px;
+  left: 1887px;
+}
+
+.calculate-screen .vector-90 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1064px;
+  left: 1863px;
+}
+
+.calculate-screen .vector-91 {
+  position: absolute;
+  width: 11px;
+  height: 2px;
+  top: 1064px;
+  left: 1895px;
+}
+
+.calculate-screen .vector-92 {
+  position: absolute;
+  width: 2px;
+  height: 9px;
+  top: 1057px;
+  left: 1905px;
+}
+
+.calculate-screen .vector-93 {
+  position: absolute;
+  width: 5px;
+  height: 6px;
+  top: 1058px;
+  left: 1899px;
+}
+
+.calculate-screen .vector-94 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1060px;
+  left: 1900px;
+}
+
+.calculate-screen .vector-95 {
+  position: absolute;
+  width: 6px;
+  height: 5px;
+  top: 1062px;
+  left: 1891px;
+}
+
+.calculate-screen .vector-96 {
+  position: absolute;
+  width: 10px;
+  height: 6px;
+  top: 1055px;
+  left: 1892px;
+}
+
+.calculate-screen .vector-97 {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 1054px;
+  left: 1904px;
+}
+
+.calculate-screen .vector-98 {
+  position: absolute;
+  width: 4px;
+  height: 10px;
+  top: 1037px;
+  left: 1904px;
+}
+
+.calculate-screen .vector-99 {
+  position: absolute;
+  width: 3px;
+  height: 6px;
+  top: 1029px;
+  left: 1904px;
+}
+
+.calculate-screen .vector-100 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1036px;
+  left: 1904px;
+}
+
+.calculate-screen .vector-101 {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 1039px;
+  left: 1896px;
+}
+
+.calculate-screen .vector-102 {
+  position: absolute;
+  width: 3px;
+  height: 2px;
+  top: 1035px;
+  left: 1896px;
+}
+
+.calculate-screen .vector-103 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1037px;
+  left: 1899px;
+}
+
+.calculate-screen .vector-104 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1053px;
+  left: 1884px;
+}
+
+.calculate-screen .vector-105 {
+  position: absolute;
+  width: 4px;
+  height: 5px;
+  top: 1057px;
+  left: 1873px;
+}
+
+.calculate-screen .vector-106 {
+  position: absolute;
+  width: 4px;
+  height: 5px;
+  top: 1057px;
+  left: 1875px;
+}
+
+.calculate-screen .vector-107 {
+  position: absolute;
+  width: 3px;
+  height: 6px;
+  top: 1060px;
+  left: 1872px;
+}
+
+.calculate-screen .vector-108 {
+  position: absolute;
+  width: 3px;
+  height: 5px;
+  top: 1060px;
+  left: 1877px;
+}
+
+.calculate-screen .vector-109 {
+  position: absolute;
+  width: 3px;
+  height: 4px;
+  top: 1063px;
+  left: 1879px;
+}
+
+.calculate-screen .vector-110 {
+  position: absolute;
+  width: 1px;
+  height: 4px;
+  top: 1057px;
+  left: 1875px;
+}
+
+.calculate-screen .vector-111 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1067px;
+  left: 1866px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-112 {
+  position: absolute;
+  width: 4px;
+  height: 17px;
+  top: 1029px;
+  left: 1898px;
+}
+
+.calculate-screen .vector-113 {
+  position: absolute;
+  width: 6px;
+  height: 8px;
+  top: 1034px;
+  left: 1874px;
+}
+
+.calculate-screen .vector-114 {
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  top: 1037px;
+  left: 1873px;
+}
+
+.calculate-screen .vector-115 {
+  position: absolute;
+  width: 7px;
+  height: 3px;
+  top: 1033px;
+  left: 1875px;
+}
+
+.calculate-screen .vector-116 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1061px;
+  left: 1875px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-117 {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 1056px;
+  left: 1867px;
+}
+
+.calculate-screen .vector-118 {
+  position: absolute;
+  width: 5px;
+  height: 8px;
+  top: 1057px;
+  left: 1881px;
+}
+
+.calculate-screen .vector-119 {
+  position: absolute;
+  width: 1px;
+  height: 5px;
+  top: 1036px;
+  left: 1895px;
+}
+
+.calculate-screen .vector-120 {
+  position: absolute;
+  width: 5px;
+  height: 8px;
+  top: 1057px;
+  left: 34px;
+}
+
+.calculate-screen .vector-121 {
+  position: absolute;
+  width: 4px;
+  height: 17px;
+  top: 1029px;
+  left: 18px;
+}
+
+.calculate-screen .vector-122 {
+  position: absolute;
+  width: 3px;
+  height: 4px;
+  top: 1063px;
+  left: 38px;
+}
+
+.calculate-screen .vector-123 {
+  position: absolute;
+  width: 4px;
+  height: 5px;
+  top: 1057px;
+  left: 40px;
+}
+
+.calculate-screen .vector-124 {
+  position: absolute;
+  width: 4px;
+  height: 5px;
+  top: 1057px;
+  left: 44px;
+}
+
+.calculate-screen .vector-125 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1037px;
+  left: 20px;
+}
+
+.calculate-screen .vector-126 {
+  position: absolute;
+  width: 3px;
+  height: 2px;
+  top: 1035px;
+  left: 21px;
+}
+
+.calculate-screen .vector-127 {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 1039px;
+  left: 20px;
+}
+
+.calculate-screen .vector-128 {
+  position: absolute;
+  width: 6px;
+  height: 5px;
+  top: 1062px;
+  left: 23px;
+}
+
+.calculate-screen .vector-129 {
+  position: absolute;
+  width: 2px;
+  height: 9px;
+  top: 1057px;
+  left: 13px;
+}
+
+.calculate-screen .vector-130 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1064px;
+  left: 55px;
+}
+
+.calculate-screen .vector-131 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1030px;
+  left: 25px;
+}
+
+.calculate-screen .vector-132 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1021px;
+  left: 42px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-133 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1025px;
+  left: 53px;
+}
+
+.calculate-screen .vector-134 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1027px;
+  left: 56px;
+}
+
+.calculate-screen .vector-135 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1038px;
+  left: 60px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-136 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1045px;
+  left: 58px;
+}
+
+.calculate-screen .vector-137 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1050px;
+  left: 54px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-138 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1053px;
+  left: 50px;
+}
+
+.calculate-screen .vector-139 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1060px;
+  left: 19px;
+}
+
+.calculate-screen .vector-140 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1055px;
+  left: 44px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-141 {
+  position: absolute;
+  width: 5px;
+  height: 6px;
+  top: 1058px;
+  left: 16px;
+}
+
+.calculate-screen .vector-142 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1046px;
+  left: 27px;
+}
+
+.calculate-screen .vector-143 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1035px;
+  left: 24px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-144 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1042px;
+  left: 25px;
+}
+
+.calculate-screen .vector-145 {
+  position: absolute;
+  width: 4px;
+  height: 2px;
+  top: 1050px;
+  left: 38px;
+}
+
+.calculate-screen .vector-146 {
+  position: absolute;
+  width: 3px;
+  height: 2px;
+  top: 1026px;
+  left: 47px;
+}
+
+.calculate-screen .vector-147 {
+  position: absolute;
+  width: 2px;
+  height: 3px;
+  top: 1039px;
+  left: 54px;
+}
+
+.calculate-screen .vector-148 {
+  position: absolute;
+  width: 1px;
+  height: 3px;
+  top: 1036px;
+  left: 28px;
+}
+
+.calculate-screen .vector-149 {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 1042px;
+  left: 37px;
+}
+
+.calculate-screen .vector-150 {
+  position: absolute;
+  width: 1px;
+  height: 3px;
+  top: 1028px;
+  left: 43px;
+}
+
+.calculate-screen .vector-151 {
+  position: absolute;
+  width: 3px;
+  height: 2px;
+  top: 1031px;
+  left: 46px;
+}
+
+.calculate-screen .vector-152 {
+  position: absolute;
+  width: 4px;
+  height: 1px;
+  top: 1037px;
+  left: 48px;
+}
+
+.calculate-screen .vector-153 {
+  position: absolute;
+  width: 5px;
+  height: 3px;
+  top: 1033px;
+  left: 47px;
+}
+
+.calculate-screen .vector-154 {
+  position: absolute;
+  width: 5px;
+  height: 2px;
+  top: 1039px;
+  left: 48px;
+}
+
+.calculate-screen .vector-155 {
+  position: absolute;
+  width: 3px;
+  height: 5px;
+  top: 1042px;
+  left: 45px;
+}
+
+.calculate-screen .vector-156 {
+  position: absolute;
+  width: 2px;
+  height: 6px;
+  top: 1043px;
+  left: 40px;
+}
+
+.calculate-screen .vector-157 {
+  position: absolute;
+  width: 5px;
+  height: 4px;
+  top: 1041px;
+  left: 34px;
+}
+
+.calculate-screen .vector-158 {
+  position: absolute;
+  width: 6px;
+  height: 2px;
+  top: 1037px;
+  left: 32px;
+}
+
+.calculate-screen .vector-159 {
+  position: absolute;
+  width: 5px;
+  height: 4px;
+  top: 1030px;
+  left: 33px;
+}
+
+.calculate-screen .vector-160 {
+  position: absolute;
+  width: 3px;
+  height: 5px;
+  top: 1027px;
+  left: 39px;
+}
+
+.calculate-screen .vector-161 {
+  position: absolute;
+  width: 3px;
+  height: 4px;
+  top: 1028px;
+  left: 45px;
+}
+
+.calculate-screen .vector-162 {
+  position: absolute;
+  width: 2px;
+  height: 5px;
+  top: 1034px;
+  left: 53px;
+}
+
+.calculate-screen .vector-163 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 1042px;
+  left: 50px;
+}
+
+.calculate-screen .vector-164 {
+  position: absolute;
+  width: 4px;
+  height: 3px;
+  top: 1041px;
+  left: 47px;
+}
+
+.calculate-screen .vector-165 {
+  position: absolute;
+  width: 5px;
+  height: 3px;
+  top: 1049px;
+  left: 43px;
+}
+
+.calculate-screen .vector-166 {
+  position: absolute;
+  width: 2px;
+  height: 4px;
+  top: 1043px;
+  left: 43px;
+}
+
+.calculate-screen .vector-167 {
+  position: absolute;
+  width: 5px;
+  height: 4px;
+  top: 1046px;
+  left: 33px;
+}
+
+.calculate-screen .vector-168 {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  top: 1029px;
+  left: 36px;
+}
+
+.calculate-screen .vector-169 {
+  position: absolute;
+  width: 4px;
+  height: 2px;
+  top: 1034px;
+  left: 29px;
+}
+
+.calculate-screen .vector-170 {
+  position: absolute;
+  width: 4px;
+  height: 3px;
+  top: 1042px;
+  left: 53px;
+}
+
+.calculate-screen .vector-171 {
+  position: absolute;
+  width: 4px;
+  height: 3px;
+  top: 1026px;
+  left: 34px;
+}
+
+.calculate-screen .vector-172 {
+  position: absolute;
+  width: 5px;
+  height: 2px;
+  top: 1034px;
+  left: 26px;
+}
+
+.calculate-screen .vector-173 {
+  position: absolute;
+  width: 4px;
+  height: 3px;
+  top: 1043px;
+  left: 28px;
+}
+
+.calculate-screen .vector-174 {
+  position: absolute;
+  width: 3px;
+  height: 4px;
+  top: 1047px;
+  left: 32px;
+}
+
+.calculate-screen .vector-175 {
+  position: absolute;
+  width: 3px;
+  height: 4px;
+  top: 1049px;
+  left: 35px;
+}
+
+.calculate-screen .vector-176 {
+  position: absolute;
+  width: 2px;
+  height: 5px;
+  top: 1049px;
+  left: 43px;
+}
+
+.calculate-screen .vector-177 {
+  position: absolute;
+  width: 3px;
+  height: 4px;
+  top: 1049px;
+  left: 46px;
+}
+
+.calculate-screen .vector-178 {
+  position: absolute;
+  width: 5px;
+  height: 2px;
+  top: 1025px;
+  left: 42px;
+}
+
+.calculate-screen .vector-179 {
+  position: absolute;
+  width: 1px;
+  height: 5px;
+  top: 1036px;
+  left: 24px;
+}
+
+.calculate-screen .vector-180 {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 1045px;
+  left: 50px;
+}
+
+.calculate-screen .vector-181 {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 1029px;
+  left: 49px;
+}
+
+.calculate-screen .vector-182 {
+  position: absolute;
+  width: 4px;
+  height: 2px;
+  top: 1037px;
+  left: 54px;
+}
+
+.calculate-screen .vector-183 {
+  position: absolute;
+  width: 8px;
+  height: 5px;
+  top: 1023px;
+  left: 45px;
+}
+
+.calculate-screen .vector-184 {
+  position: absolute;
+  width: 3px;
+  height: 4px;
+  top: 1023px;
+  left: 44px;
+}
+
+.calculate-screen .vector-185 {
+  position: absolute;
+  width: 5px;
+  height: 2px;
+  top: 1033px;
+  left: 53px;
+}
+
+.calculate-screen .vector-186 {
+  position: absolute;
+  width: 6px;
+  height: 8px;
+  top: 1034px;
+  left: 40px;
+}
+
+.calculate-screen .vector-187 {
+  position: absolute;
+  width: 6px;
+  height: 7px;
+  top: 1026px;
+  left: 27px;
+}
+
+.calculate-screen .vector-188 {
+  position: absolute;
+  width: 3px;
+  height: 5px;
+  top: 1022px;
+  left: 41px;
+}
+
+.calculate-screen .vector-189 {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 1028px;
+  left: 51px;
+}
+
+.calculate-screen .vector-190 {
+  position: absolute;
+  width: 9px;
+  height: 3px;
+  top: 1022px;
+  left: 35px;
+}
+
+.calculate-screen .line-3 {
+  width: 55px;
+  height: 1px;
+  top: 1072px;
+  left: 7px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-191 {
+  position: absolute;
+  width: 3px;
+  height: 6px;
+  top: 1060px;
+  left: 45px;
+}
+
+.calculate-screen .vector-192 {
+  position: absolute;
+  width: 6px;
+  height: 5px;
+  top: 1047px;
+  left: 48px;
+}
+
+.calculate-screen .vector-193 {
+  position: absolute;
+  width: 5px;
+  height: 2px;
+  top: 1031px;
+  left: 28px;
+}
+
+.calculate-screen .vector-194 {
+  position: absolute;
+  width: 1px;
+  height: 4px;
+  top: 1057px;
+  left: 43px;
+}
+
+.calculate-screen .vector-195 {
+  position: absolute;
+  width: 5px;
+  height: 7px;
+  top: 1028px;
+  left: 53px;
+}
+
+.calculate-screen .vector-196 {
+  position: absolute;
+  width: 4px;
+  height: 3px;
+  top: 1026px;
+  left: 32px;
+}
+
+.calculate-screen .vector-197 {
+  position: absolute;
+  width: 3px;
+  height: 5px;
+  top: 1060px;
+  left: 40px;
+}
+
+.calculate-screen .vector-198 {
+  position: absolute;
+  width: 4px;
+  height: 8px;
+  top: 1037px;
+  left: 55px;
+}
+
+.calculate-screen .vector-199 {
+  position: absolute;
+  width: 4px;
+  height: 3px;
+  top: 1040px;
+  left: 27px;
+}
+
+.calculate-screen .vector-200 {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 1056px;
+  left: 47px;
+}
+
+.calculate-screen .vector-201 {
+  position: absolute;
+  width: 8px;
+  height: 10px;
+  top: 1045px;
+  left: 20px;
+}
+
+.calculate-screen .vector-202 {
+  position: absolute;
+  width: 11px;
+  height: 2px;
+  top: 1064px;
+  left: 14px;
+}
+
+.calculate-screen .vector-203 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1053px;
+  left: 35px;
+}
+
+.calculate-screen .vector-204 {
+  position: absolute;
+  width: 8px;
+  height: 10px;
+  top: 1019px;
+  left: 20px;
+}
+
+.calculate-screen .vector-205 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1033px;
+  left: 59px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-206 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1036px;
+  left: 15px;
+}
+
+.calculate-screen .vector-207 {
+  position: absolute;
+  width: 5px;
+  height: 52px;
+  top: 1018px;
+  left: 9px;
+}
+
+.calculate-screen .vector-208 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1051px;
+  left: 31px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-209 {
+  position: absolute;
+  width: 10px;
+  height: 6px;
+  top: 1055px;
+  left: 18px;
+}
+
+.calculate-screen .line-4 {
+  width: 1px;
+  height: 56px;
+  top: 1018px;
+  left: 6px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-210 {
+  position: absolute;
+  width: 3px;
+  height: 4px;
+  top: 1024px;
+  left: 35px;
+}
+
+.calculate-screen .vector-211 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1067px;
+  left: 53px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-212 {
+  position: absolute;
+  width: 9px;
+  height: 8px;
+  top: 1053px;
+  left: 28px;
+}
+
+.calculate-screen .vector-213 {
+  position: absolute;
+  width: 7px;
+  height: 3px;
+  top: 1033px;
+  left: 38px;
+}
+
+.calculate-screen .vector-214 {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 1044px;
+  left: 28px;
+}
+
+.calculate-screen .vector-215 {
+  position: absolute;
+  width: 5px;
+  height: 2px;
+  top: 1039px;
+  left: 33px;
+}
+
+.calculate-screen .vector-216 {
+  position: absolute;
+  width: 3px;
+  height: 5px;
+  top: 1040px;
+  left: 29px;
+}
+
+.calculate-screen .vector-217 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1024px;
+  left: 16px;
+}
+
+.calculate-screen .vector-218 {
+  position: absolute;
+  width: 4px;
+  height: 10px;
+  top: 1037px;
+  left: 13px;
+}
+
+.calculate-screen .vector-219 {
+  position: absolute;
+  width: 11px;
+  height: 7px;
+  top: 1047px;
+  left: 13px;
+}
+
+.calculate-screen .vector-220 {
+  position: absolute;
+  width: 11px;
+  height: 10px;
+  top: 1052px;
+  left: 50px;
+}
+
+.calculate-screen .vector-221 {
+  position: absolute;
+  width: 5px;
+  height: 4px;
+  top: 1026px;
+  left: 49px;
+}
+
+.calculate-screen .vector-222 {
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  top: 1037px;
+  left: 39px;
+}
+
+.calculate-screen .vector-223 {
+  position: absolute;
+  width: 3px;
+  height: 9px;
+  top: 1034px;
+  left: 26px;
+}
+
+.calculate-screen .vector-224 {
+  position: absolute;
+  width: 4px;
+  height: 1px;
+  top: 1035px;
+  left: 33px;
+}
+
+.calculate-screen .vector-225 {
+  position: absolute;
+  width: 2px;
+  height: 4px;
+  top: 1031px;
+  left: 31px;
+}
+
+.calculate-screen .vector-226 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1050px;
+  left: 16px;
+}
+
+.calculate-screen .vector-227 {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 1054px;
+  left: 12px;
+}
+
+.calculate-screen .vector-228 {
+  position: absolute;
+  width: 7px;
+  height: 11px;
+  top: 1056px;
+  left: 29px;
+}
+
+.calculate-screen .vector-229 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1024px;
+  left: 31px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-230 {
+  position: absolute;
+  width: 7px;
+  height: 11px;
+  top: 1056px;
+  left: 53px;
+}
+
+.calculate-screen .vector-231 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1021px;
+  left: 46px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-232 {
+  position: absolute;
+  width: 53px;
+  height: 5px;
+  top: 1066px;
+  left: 10px;
+}
+
+.calculate-screen .vector-233 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1022px;
+  left: 34px;
+}
+
+.calculate-screen .line-5 {
+  width: 56px;
+  height: 1px;
+  top: 1073px;
+  left: 6px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-234 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1061px;
+  left: 44px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-235 {
+  position: absolute;
+  width: 10px;
+  height: 3px;
+  top: 1051px;
+  left: 35px;
+}
+
+.calculate-screen .vector-236 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1063px;
+  left: 32px;
+}
+
+.calculate-screen .vector-237 {
+  position: absolute;
+  width: 3px;
+  height: 6px;
+  top: 1029px;
+  left: 13px;
+}
+
+.calculate-screen .vector-238 {
+  position: absolute;
+  width: 11px;
+  height: 7px;
+  top: 1021px;
+  left: 13px;
+}
+
+.calculate-screen .fotor-ai-2 {
+  position: absolute;
+  width: 1303px;
+  height: 991px;
+  top: 89px;
+  left: 616px;
+  object-fit: cover;
+}
+
+.calculate-screen .hanging-signs-should {
+  position: absolute;
+  width: 619px;
+  height: 669px;
+  top: 64px;
+  left: 667px;
+  mix-blend-mode: darken;
+  object-fit: cover;
+}
+
+.calculate-screen .hanging-signs-should-2 {
+  position: absolute;
+  width: 573px;
+  height: 550px;
+  top: 63px;
+  left: 690px;
+  object-fit: cover;
+}
+
+.calculate-screen .rectangle-23 {
+  position: absolute;
+  width: 101px;
+  height: 8px;
+  top: 81px;
+  left: 1011px;
+  background-color: #915050;
+}
+
+.calculate-screen .rectangle-24 {
+  position: absolute;
+  width: 98px;
+  height: 3px;
+  top: 86px;
+  left: 711px;
+  background-color: #b5a795;
+}
+
+.calculate-screen .rectangle-25 {
+  position: absolute;
+  width: 98px;
+  height: 3px;
+  top: 86px;
+  left: 1112px;
+  background-color: #b5a795;
+}
+
+.calculate-screen .rectangle-26 {
+  position: absolute;
+  width: 101px;
+  height: 7px;
+  top: 82px;
+  left: 809px;
+  background-color: #915050;
+}
+
+.calculate-screen .vector-239 {
+  position: absolute;
+  width: 21px;
+  height: 22px;
+  top: 970px;
+  left: 1785px;
+  mix-blend-mode: color-dodge;
+}
+
+.calculate-screen .vector-240 {
+  position: absolute;
+  width: 3px;
+  height: 2px;
+  top: 982px;
+  left: 1793px;
+  mix-blend-mode: color-dodge;
+}
+
+.calculate-screen .vector-241 {
+  position: absolute;
+  width: 2px;
+  height: 1px;
+  top: 983px;
+  left: 1795px;
+  mix-blend-mode: color-dodge;
+}
+
+.calculate-screen .vector-242 {
+  position: absolute;
+  width: 3px;
+  height: 4px;
+  top: 986px;
+  left: 1800px;
+  mix-blend-mode: color-dodge;
+}
+
+.calculate-screen .vector-243 {
+  position: absolute;
+  width: 1px;
+  height: 2px;
+  top: 988px;
+  left: 1801px;
+  mix-blend-mode: color-dodge;
+}
+
+.calculate-screen .vector-244 {
+  position: absolute;
+  width: 6px;
+  height: 11px;
+  top: 976px;
+  left: 1803px;
+  mix-blend-mode: color-dodge;
+}
+
+.calculate-screen .vector-245 {
+  position: absolute;
+  width: 13px;
+  height: 9px;
+  top: 970px;
+  left: 1788px;
+  mix-blend-mode: color-dodge;
+}
+
+.calculate-screen .rectangle-27 {
+  position: absolute;
+  width: 2px;
+  height: 990px;
+  top: 89px;
+  left: 615px;
+  background-color: #000000;
+}
+
+.calculate-screen .vector-246 {
+  position: absolute;
+  width: 11px;
+  height: 8px;
+  top: 1027px;
+  left: 658px;
+}
+
+.calculate-screen .vector-247 {
+  position: absolute;
+  width: 3px;
+  height: 7px;
+  top: 1028px;
+  left: 665px;
+}
+
+.calculate-screen .vector-248 {
+  position: absolute;
+  width: 4px;
+  height: 6px;
+  top: 1025px;
+  left: 665px;
+}
+
+.calculate-screen .vector-249 {
+  position: absolute;
+  width: 5px;
+  height: 7px;
+  top: 1026px;
+  left: 663px;
+}
+
+.calculate-screen .vector-250 {
+  position: absolute;
+  width: 5px;
+  height: 4px;
+  top: 1030px;
+  left: 656px;
+}
+
+.calculate-screen .ydx-lkdey {
+  position: absolute;
+  width: 526px;
+  height: 316px;
+  top: 22px;
+  left: 63px;
+  object-fit: cover;
+}
+
+.calculate-screen .rectangle-28 {
+  position: absolute;
+  width: 72px;
+  height: 85px;
+  top: 178px;
+  left: 173px;
+  background-color: #7e5a49;
+  mix-blend-mode: screen;
+}
+
+.calculate-screen .rectangle-29 {
+  position: absolute;
+  width: 72px;
+  height: 83px;
+  top: 180px;
+  left: 404px;
+  background-color: #7e5a49;
+  mix-blend-mode: screen;
+}
+
+.calculate-screen .ellipse {
+  position: absolute;
+  width: 159px;
+  height: 144px;
+  top: 147px;
+  left: 245px;
+  background-color: #7e5a49;
+  border-radius: 79.5px/72px;
+  mix-blend-mode: screen;
+}
+
+.calculate-screen .polygon {
+  width: 31px;
+  height: 55px;
+  top: 160px;
+  left: 373px;
+  position: absolute;
+  mix-blend-mode: screen;
+}
+
+.calculate-screen .polygon-2 {
+  width: 30px;
+  height: 56px;
+  top: 160px;
+  left: 245px;
+  position: absolute;
+  mix-blend-mode: screen;
+}
+
+.calculate-screen .polygon-3 {
+  width: 71px;
+  height: 68px;
+  top: 223px;
+  left: 245px;
+  position: absolute;
+  mix-blend-mode: screen;
+}
+
+.calculate-screen .polygon-4 {
+  width: 108px;
+  height: 69px;
+  top: 94px;
+  left: 267px;
+  position: absolute;
+  mix-blend-mode: screen;
+}
+
+.calculate-screen .vector-251 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 564px;
+  left: 344px;
+  object-fit: cover;
+}
+
+.calculate-screen .vector-252 {
+  position: absolute;
+  width: 7px;
+  height: 41px;
+  top: 196px;
+  left: 193px;
+}
+
+.calculate-screen .vector-253 {
+  position: absolute;
+  width: 27px;
+  height: 15px;
+  top: 203px;
+  left: 198px;
+}
+
+.calculate-screen .vector-254 {
+  position: absolute;
+  width: 32px;
+  height: 21px;
+  top: 214px;
+  left: 197px;
+}
+
+.calculate-screen .vector-255 {
+  position: absolute;
+  width: 40px;
+  height: 17px;
+  top: 218px;
+  left: 266px;
+}
+
+.calculate-screen .vector-256 {
+  position: absolute;
+  width: 28px;
+  height: 31px;
+  top: 214px;
+  left: 215px;
+}
+
+.calculate-screen .vector-257 {
+  position: absolute;
+  width: 19px;
+  height: 27px;
+  top: 212px;
+  left: 228px;
+}
+
+.calculate-screen .vector-258 {
+  position: absolute;
+  width: 22px;
+  height: 18px;
+  top: 212px;
+  left: 240px;
+}
+
+.calculate-screen .vector-259 {
+  position: absolute;
+  width: 38px;
+  height: 24px;
+  top: 206px;
+  left: 286px;
+}
+
+.calculate-screen .vector-260 {
+  position: absolute;
+  width: 42px;
+  height: 21px;
+  top: 256px;
+  left: 316px;
+}
+
+.calculate-screen .vector-261 {
+  position: absolute;
+  width: 19px;
+  height: 18px;
+  top: 214px;
+  left: 324px;
+}
+
+.calculate-screen .vector-262 {
+  position: absolute;
+  width: 30px;
+  height: 24px;
+  top: 214px;
+  left: 331px;
+}
+
+.calculate-screen .vector-263 {
+  position: absolute;
+  width: 16px;
+  height: 27px;
+  top: 210px;
+  left: 363px;
+}
+
+.calculate-screen .vector-264 {
+  position: absolute;
+  width: 25px;
+  height: 26px;
+  top: 212px;
+  left: 380px;
+}
+
+.calculate-screen .vector-265 {
+  position: absolute;
+  width: 21px;
+  height: 24px;
+  top: 213px;
+  left: 405px;
+}
+
+.calculate-screen .vector-266 {
+  position: absolute;
+  width: 33px;
+  height: 18px;
+  top: 219px;
+  left: 426px;
+}
+
+.calculate-screen .vector-267 {
+  position: absolute;
+  width: 7px;
+  height: 8px;
+  top: 210px;
+  left: 432px;
+}
+
+.calculate-screen .vector-268 {
+  position: absolute;
+  width: 7px;
+  height: 10px;
+  top: 210px;
+  left: 438px;
+}
+
+.calculate-screen .vector-269 {
+  position: absolute;
+  width: 35px;
+  height: 15px;
+  top: 255px;
+  left: 284px;
+}
+
+.calculate-screen .vector-270 {
+  position: absolute;
+  width: 19px;
+  height: 12px;
+  top: 248px;
+  left: 296px;
+}
+
+.calculate-screen .vector-271 {
+  position: absolute;
+  width: 12px;
+  height: 11px;
+  top: 259px;
+  left: 318px;
+}
+
+.calculate-screen .vector-272 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 582px;
+  left: 307px;
+  object-fit: cover;
+}
+
+.calculate-screen .rectangle-30 {
+  position: absolute;
+  width: 526px;
+  height: 211px;
+  top: 457px;
+  left: 717px;
+  background-color: #d9d9d9;
+}

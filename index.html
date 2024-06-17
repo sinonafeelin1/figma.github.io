@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Учет рабочего времени</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+    <body onwheel="return false;"> <!-- Запрет изменения масштаба колесиком мыши -->
+    </body>
+  <body>
+
+
+  </head>
+  <body>
+
+    <style>
+      body {
+      zoom: 100% !important; /* Запрещаем изменение масштаба страницы */
+      }
+       body {
+      overflow: hidden; /* Запрет прокрутки страницы */
+      }
+        h1{text-align:center;color:white;}
+        h3{text-align:center;color:white;}
+        body{background-image:("hanging-signs-should-be-the-same-size-as-normal-signs-v0-ttmos4n.png");}
+        body{background-image:("fotor-ai-2024052822243-1.png");}  
+        body{background-image:("fotor-ai-20240529135932-1.png");}
+        @media (max-width: 768px) {
+  body{background-image:("fotor-ai-20240529135932-1-mob.png");}
+}
+        body{background-image:("hanging-signs-should-be-the-same-size-as-normal-signs-v0-ttmos4n-1.png");}
+      
+    </style>
+  
+</body>
+
+ 
+
+    <div class="calculate-screen">
+      <div class="div">
+        <img class="fotor-ai" src="img/fotor-ai-20240529135932-1.png" />
+        
+        <!--<div class="view">
+          <div class="overlap-group">
+            <div class="frame"></div>
+            <div class="group-wrapper">
+              <div class="group"><div class="text-wrapper">назад</div></div>
+              <a href="LoginText/index.html" target="_blank">
+                <button>Назад</button>
+                <button onclick="openFrame()">Перейти к фрейму</button>
+            </a>
+            </div>
+          </div>
+        </div>-->
+
+        <!--<div class="overlap-wrapper">
+          <div class="overlap-group">
+            <div class="frame"></div>
+            <div class="group-wrapper">
+              <div class="group"><div class="text-wrapper">готово</div></div>
+            </div>
+          </div>
+        </div>-->
+        <div class="rectangle"></div>
+        <div class="rectangle-2"></div>
+        <div class="rectangle-3"></div>
+        <div class="rectangle-4"></div>
+        <div class="rectangle-5"></div>
+        <div class="rectangle-6"></div>
+        <div class="rectangle-7"></div>
+        <div class="rectangle-8"></div>
+        <div class="rectangle-9"></div>
+        <div class="rectangle-10"></div>
+        <div class="rectangle-11"></div>
+        <div class="rectangle-12"></div>
+        <div class="rectangle-13"></div>
+        <div class="rectangle-14"></div>
+        <div class="rectangle-15"></div>
+        <div class="rectangle-16"></div>
+        <div class="rectangle-17"></div>
+        <div class="rectangle-18"></div>
+        <div class="rectangle-19"></div>
+        <div class="rectangle-20"></div>
+        <div class="rectangle-21"></div>
+        <div class="rectangle-22"></div>
+        <img class="line" src="img/line-1.svg" />
+        <img class="img" src="img/line-2.svg" />
+        <img class="line-2" src="img/line-4.svg" />
+        <img class="vector" src="img/vector-29.svg" />
+        <img class="vector-2" src="img/vector-31.svg" />
+        <img class="vector-3" src="img/vector-32.svg" />
+        <img class="vector-4" src="img/vector-34.svg" />
+        <img class="vector-5" src="img/vector-34.svg" />
+        <img class="vector-6" src="img/vector-35.svg" />
+        <img class="vector-7" src="img/vector-36.svg" />
+        <img class="vector-8" src="img/vector-37.svg" />
+        <img class="vector-9" src="img/vector-38.svg" />
+        <img class="vector-10" src="img/vector-39.svg" />
+        <img class="vector-11" src="img/vector-40.svg" />
+        <img class="vector-12" src="img/vector-41.svg" />
+        <img class="vector-13" src="img/vector-42.svg" />
+        <img class="vector-14" src="img/vector-43.svg" />
+        <img class="vector-15" src="img/vector-44.svg" />
+        <img class="vector-16" src="img/vector-45.svg" />
+        <img class="vector-17" src="img/vector-46.svg" />
+        <img class="vector-18" src="img/vector-47.svg" />
+        <img class="vector-19" src="img/vector-48.svg" />
+        <img class="vector-20" src="img/vector-49.svg" />
+        <img class="vector-21" src="img/vector-50.svg" />
+        <img class="vector-22" src="img/vector-51.svg" />
+        <img class="vector-23" src="img/vector-52.svg" />
+        <img class="vector-24" src="img/vector-53.svg" />
+        <img class="vector-25" src="img/vector-54.svg" />
+        <img class="vector-26" src="img/vector-55.svg" />
+        <img class="vector-27" src="img/vector-56.svg" />
+        <img class="vector-28" src="img/vector-57.svg" />
+        <img class="vector-29" src="img/vector-58.svg" />
+        <img class="vector-30" src="img/vector-59.svg" />
+        <img class="vector-31" src="img/vector-60.svg" />
+        <img class="vector-32" src="img/vector-61.svg" />
+        <img class="vector-33" src="img/vector-62.svg" />
+        <img class="vector-34" src="img/vector-63.svg" />
+        <img class="vector-35" src="img/vector-64.svg" />
+        <img class="vector-36" src="img/vector-65.svg" />
+        <img class="vector-37" src="img/vector-66.svg" />
+        <img class="vector-38" src="img/vector-67.svg" />
+        <img class="vector-39" src="img/vector-68.svg" />
+        <img class="vector-40" src="img/vector-69.svg" />
+        <img class="vector-41" src="img/vector-70.svg" />
+        <img class="vector-42" src="img/vector-71.svg" />
+        <img class="vector-43" src="img/vector-72.svg" />
+        <img class="vector-44" src="img/vector-73.svg" />
+        <img class="vector-45" src="img/vector-74.svg" />
+        <img class="vector-46" src="img/vector-75.svg" />
+        <img class="vector-47" src="img/vector-76.svg" />
+        <img class="vector-48" src="img/vector-77.svg" />
+        <img class="vector-49" src="img/vector-78.svg" />
+        <img class="vector-50" src="img/vector-79.svg" />
+        <img class="vector-51" src="img/vector-80.svg" />
+        <img class="vector-52" src="img/vector-81.svg" />
+        <img class="vector-53" src="img/vector-82.svg" />
+        <img class="vector-54" src="img/vector-83.svg" />
+        <img class="vector-55" src="img/vector-84.svg" />
+        <img class="vector-56" src="img/vector-85.svg" />
+        <img class="vector-57" src="img/vector-86.svg" />
+        <img class="vector-58" src="img/vector-87.svg" />
+        <img class="vector-59" src="img/vector-88.svg" />
+        <img class="vector-60" src="img/vector-89.svg" />
+        <img class="vector-61" src="img/vector-90.svg" />
+        <img class="vector-62" src="img/vector-91.svg" />
+        <img class="vector-63" src="img/vector-92.svg" />
+        <img class="vector-64" src="img/vector-93.svg" />
+        <img class="vector-65" src="img/vector-94.svg" />
+        <img class="vector-66" src="img/vector-95.svg" />
+        <img class="vector-67" src="img/vector-96.svg" />
+        <img class="vector-68" src="img/vector-97.svg" />
+        <img class="vector-69" src="img/vector-98.svg" />
+        <img class="vector-70" src="img/vector-99.svg" />
+        <img class="vector-71" src="img/vector-100.svg" />
+        <img class="vector-72" src="img/vector-101.svg" />
+        <img class="vector-73" src="img/vector-102.svg" />
+        <img class="vector-74" src="img/vector-103.svg" />
+        <img class="vector-75" src="img/vector-104.svg" />
+        <img class="vector-76" src="img/vector-105.svg" />
+        <img class="vector-77" src="img/vector-106.svg" />
+        <img class="vector-78" src="img/vector-107.svg" />
+        <img class="vector-79" src="img/vector-108.svg" />
+        <img class="vector-80" src="img/vector-109.svg" />
+        <img class="vector-81" src="img/vector-110.svg" />
+        <img class="vector-82" src="img/vector-111.svg" />
+        <img class="vector-83" src="img/vector-112.svg" />
+        <img class="vector-84" src="img/vector-113.svg" />
+        <img class="vector-85" src="img/vector-114.svg" />
+        <img class="vector-86" src="img/vector-115.svg" />
+        <img class="vector-87" src="img/vector-116.svg" />
+        <img class="vector-88" src="img/vector-117.svg" />
+        <img class="vector-89" src="img/vector-118.svg" />
+        <img class="vector-90" src="img/vector-119.svg" />
+        <img class="vector-91" src="img/vector-120.svg" />
+        <img class="vector-92" src="img/vector-121.svg" />
+        <img class="vector-93" src="img/vector-122.svg" />
+        <img class="vector-94" src="img/vector-123.svg" />
+        <img class="vector-95" src="img/vector-124.svg" />
+        <img class="vector-96" src="img/vector-125.svg" />
+        <img class="vector-97" src="img/vector-126.svg" />
+        <img class="vector-98" src="img/vector-127.svg" />
+        <img class="vector-99" src="img/vector-128.svg" />
+        <img class="vector-100" src="img/vector-129.svg" />
+        <img class="vector-101" src="img/vector-130.svg" />
+        <img class="vector-102" src="img/vector-131.svg" />
+        <img class="vector-103" src="img/vector-132.svg" />
+        <img class="vector-104" src="img/vector-133.svg" />
+        <img class="vector-105" src="img/vector-134.svg" />
+        <img class="vector-106" src="img/vector-135.svg" />
+        <img class="vector-107" src="img/vector-136.svg" />
+        <img class="vector-108" src="img/vector-137.svg" />
+        <img class="vector-109" src="img/vector-138.svg" />
+        <img class="vector-110" src="img/vector-139.svg" />
+        <img class="vector-111" src="img/vector-140.svg" />
+        <img class="vector-112" src="img/vector-141.svg" />
+        <img class="vector-113" src="img/vector-142.svg" />
+        <img class="vector-114" src="img/vector-143.svg" />
+        <img class="vector-115" src="img/vector-144.svg" />
+        <img class="vector-116" src="img/vector-145.svg" />
+        <img class="vector-117" src="img/vector-146.svg" />
+        <img class="vector-118" src="img/vector-147.svg" />
+        <img class="vector-119" src="img/vector-148.svg" />
+        <img class="vector-120" src="img/vector-149.svg" />
+        <img class="vector-121" src="img/vector-150.svg" />
+        <img class="vector-122" src="img/vector-151.svg" />
+        <img class="vector-123" src="img/vector-152.svg" />
+        <img class="vector-124" src="img/vector-153.svg" />
+        <img class="vector-125" src="img/vector-154.svg" />
+        <img class="vector-126" src="img/vector-155.svg" />
+        <img class="vector-127" src="img/vector-156.svg" />
+        <img class="vector-128" src="img/vector-157.svg" />
+        <img class="vector-129" src="img/vector-158.svg" />
+        <img class="vector-130" src="img/vector-159.svg" />
+        <img class="vector-131" src="img/vector-160.svg" />
+        <img class="vector-132" src="img/vector-161.svg" />
+        <img class="vector-133" src="img/vector-162.svg" />
+        <img class="vector-134" src="img/vector-163.svg" />
+        <img class="vector-135" src="img/vector-164.svg" />
+        <img class="vector-136" src="img/vector-165.svg" />
+        <img class="vector-137" src="img/vector-166.svg" />
+        <img class="vector-138" src="img/vector-167.svg" />
+        <img class="vector-139" src="img/vector-168.svg" />
+        <img class="vector-140" src="img/vector-169.svg" />
+        <img class="vector-141" src="img/vector-170.svg" />
+        <img class="vector-142" src="img/vector-171.svg" />
+        <img class="vector-143" src="img/vector-172.svg" />
+        <img class="vector-144" src="img/vector-173.svg" />
+        <img class="vector-145" src="img/vector-174.svg" />
+        <img class="vector-146" src="img/vector-175.svg" />
+        <img class="vector-147" src="img/vector-176.svg" />
+        <img class="vector-148" src="img/vector-177.svg" />
+        <img class="vector-149" src="img/vector-178.svg" />
+        <img class="vector-150" src="img/vector-179.svg" />
+        <img class="vector-151" src="img/vector-180.svg" />
+        <img class="vector-152" src="img/vector-181.svg" />
+        <img class="vector-153" src="img/vector-182.svg" />
+        <img class="vector-154" src="img/vector-183.svg" />
+        <img class="vector-155" src="img/vector-184.svg" />
+        <img class="vector-156" src="img/vector-185.svg" />
+        <img class="vector-157" src="img/vector-186.svg" />
+        <img class="vector-158" src="img/vector-187.svg" />
+        <img class="vector-159" src="img/vector-188.svg" />
+        <img class="vector-160" src="img/vector-189.svg" />
+        <img class="vector-161" src="img/vector-190.svg" />
+        <img class="vector-162" src="img/vector-191.svg" />
+        <img class="vector-163" src="img/vector-192.svg" />
+        <img class="vector-164" src="img/vector-193.svg" />
+        <img class="vector-165" src="img/vector-194.svg" />
+        <img class="vector-166" src="img/vector-195.svg" />
+        <img class="vector-167" src="img/vector-196.svg" />
+        <img class="vector-168" src="img/vector-197.svg" />
+        <img class="vector-169" src="img/vector-198.svg" />
+        <img class="vector-170" src="img/vector-199.svg" />
+        <img class="vector-171" src="img/vector-200.svg" />
+        <img class="vector-172" src="img/vector-201.svg" />
+        <img class="vector-173" src="img/vector-202.svg" />
+        <img class="vector-174" src="img/vector-203.svg" />
+        <img class="vector-175" src="img/vector-204.svg" />
+        <img class="vector-176" src="img/vector-205.svg" />
+        <img class="vector-177" src="img/vector-206.svg" />
+        <img class="vector-178" src="img/vector-207.svg" />
+        <img class="vector-179" src="img/vector-208.svg" />
+        <img class="vector-180" src="img/vector-209.svg" />
+        <img class="vector-181" src="img/vector-210.svg" />
+        <img class="vector-182" src="img/vector-211.svg" />
+        <img class="vector-183" src="img/vector-212.svg" />
+        <img class="vector-184" src="img/vector-213.svg" />
+        <img class="vector-185" src="img/vector-214.svg" />
+        <img class="vector-186" src="img/vector-215.svg" />
+        <img class="vector-187" src="img/vector-216.svg" />
+        <img class="vector-188" src="img/vector-217.svg" />
+        <img class="vector-189" src="img/vector-218.svg" />
+        <img class="vector-190" src="img/vector-219.svg" />
+        <img class="line-3" src="img/line-5.svg" />
+        <img class="vector-191" src="img/vector-220.svg" />
+        <img class="vector-192" src="img/vector-221.svg" />
+        <img class="vector-193" src="img/vector-222.svg" />
+        <img class="vector-194" src="img/vector-223.svg" />
+        <img class="vector-195" src="img/vector-224.svg" />
+        <img class="vector-196" src="img/vector-225.svg" />
+        <img class="vector-197" src="img/vector-226.svg" />
+        <img class="vector-198" src="img/vector-227.svg" />
+        <img class="vector-199" src="img/vector-228.svg" />
+        <img class="vector-200" src="img/vector-229.svg" />
+        <img class="vector-201" src="img/vector-230.svg" />
+        <img class="vector-202" src="img/vector-231.svg" />
+        <img class="vector-203" src="img/vector-232.svg" />
+        <img class="vector-204" src="img/vector-233.svg" />
+        <img class="vector-205" src="img/vector-234.svg" />
+        <img class="vector-206" src="img/vector-235.svg" />
+        <img class="vector-207" src="img/vector-236.svg" />
+        <img class="vector-208" src="img/vector-237.svg" />
+        <img class="vector-209" src="img/vector-238.svg" />
+        <img class="line-4" src="img/line-6.svg" />
+        <img class="vector-210" src="img/vector-239.svg" />
+        <img class="vector-211" src="img/vector-240.svg" />
+        <img class="vector-212" src="img/vector-241.svg" />
+        <img class="vector-213" src="img/vector-242.svg" />
+        <img class="vector-214" src="img/vector-243.svg" />
+        <img class="vector-215" src="img/vector-244.svg" />
+        <img class="vector-216" src="img/vector-245.svg" />
+        <img class="vector-217" src="img/vector-246.svg" />
+        <img class="vector-218" src="img/vector-247.svg" />
+        <img class="vector-219" src="img/vector-267.svg" />
+        <img class="vector-220" src="img/vector-249.svg" />
+        <img class="vector-221" src="img/vector-250.svg" />
+        <img class="vector-222" src="img/vector-251.svg" />
+        <img class="vector-223" src="img/vector-252.svg" />
+        <img class="vector-224" src="img/vector-253.svg" />
+        <img class="vector-225" src="img/vector-254.svg" />
+        <img class="vector-226" src="img/vector-255.svg" />
+        <img class="vector-227" src="img/vector-256.svg" />
+        <img class="vector-228" src="img/vector-257.svg" />
+        <img class="vector-229" src="img/vector-258.svg" />
+        <img class="vector-230" src="img/vector-259.svg" />
+        <img class="vector-231" src="img/vector-260.svg" />
+        <img class="vector-232" src="img/vector-261.svg" />
+        <img class="vector-233" src="img/vector-262.svg" />
+        <img class="line-5" src="img/line-7.svg" />
+        <img class="vector-234" src="img/vector-263.svg" />
+        <img class="vector-235" src="img/vector-264.svg" />
+        <img class="vector-236" src="img/vector-265.svg" />
+        <img class="vector-237" src="img/vector-266.svg" />
+        <img class="vector-238" src="img/vector-267.svg" />
+        <img class="fotor-ai-2" src="img/fotor-ai-2024052822243-1.png" />
+        <img
+          class="hanging-signs-should"
+          src="img/hanging-signs-should-be-the-same-size-as-normal-signs-v0-ttmos4n.png"
+        />
+        <img>
+          class="hanging-signs-should-2"
+          
+            <img src="img/hanging-signs-should-be-the-same-size-as-normal-signйs-v0-ttmos4n-1.png"  class="image">
+            <div class="text">
+              <div id="container"> <!--данный контейнер работает корректно, но весь он не выводится в центр экрана (есть догадки что из-за изображения) (необходимо выводить в центр таблички)-->
+                <button id="start-work">Начало работы</button>
+                <button id="end-work">Конец работы</button>
+                <div id="start-timer">Время начала работы: <span id="start-time"></span></div>
+                <div id="end-timer">Время окончания работы: <span id="end-time"></span></div>
+                <button id="generate-report-day">Отчет за день</button>                    
+                <button id="generate-report-week">Отчет за неделю</button>
+                <div id="report"></div>
+            </div>
+          </div>
+        
+        <div class="rectangle-23"></div>
+        <div class="rectangle-24"></div>
+        <div class="rectangle-25"></div>
+        <div class="rectangle-26"></div>
+        <img class="vector-239" src="img/vector-268.svg" />
+        <img class="vector-240" src="img/vector-269.svg" />
+        <img class="vector-241" src="img/vector-270.svg" />
+        <img class="vector-242" src="img/vector-271.svg" />
+        <img class="vector-243" src="img/vector-272.svg" />
+        <img class="vector-244" src="img/vector-273.svg" />
+        <img class="vector-245" src="img/vector-274.svg" />
+        <div class="rectangle-27"></div>
+        <img class="vector-246" src="img/vector-389.svg" />
+        <img class="vector-247" src="img/vector-390.svg" />
+        <img class="vector-248" src="img/vector-391.svg" />
+        <img class="vector-249" src="img/vector-392.svg" />
+        <img class="vector-250" src="img/vector-393.svg" />
+        <img class="ydx-lkdey" src="img/yd9x-lk3dey-photoroom-1.png" />
+        <div class="rectangle-28"></div>
+        <div class="rectangle-29"></div>
+        <div class="ellipse"></div>
+        <img class="polygon" src="img/polygon-2.svg" />
+        <img class="polygon-2" src="img/polygon-3.svg" />
+        <img class="polygon-3" src="img/polygon-4.svg" />
+        <img class="polygon-4" src="img/polygon-5.svg" />
+        <img class="vector-251" src="img/vector-28.png" />
+        <img class="vector-252" src="img/vector-1.svg" />
+        <img class="vector-253" src="img/vector-2.svg" />
+        <img class="vector-254" src="img/vector-3.svg" />
+        <img class="vector-255" src="img/vector-7.svg" />
+        <img class="vector-256" src="img/vector-23.svg" />
+        <img class="vector-257" src="img/vector-5.svg" />
+        <img class="vector-258" src="img/vector-6.svg" />
+        <img class="vector-259" src="img/vector-9.svg" />
+        <img class="vector-260" src="img/vector-21.svg" />
+        <img class="vector-261" src="img/vector-10.svg" />
+        <img class="vector-262" src="img/vector-11.svg" />
+        <img class="vector-263" src="img/vector-12.svg" />
+        <img class="vector-264" src="img/vector-13.svg" />
+        <img class="vector-265" src="img/vector-14.svg" />
+        <img class="vector-266" src="img/vector-15.svg" />
+        <img class="vector-267" src="img/vector-16.svg" />
+        <img class="vector-268" src="img/vector-17.svg" />
+        <img class="vector-269" src="img/vector-18.svg" />
+        <img class="vector-270" src="img/vector-19.svg" />
+        <img class="vector-271" src="img/vector-20.svg" />
+        <img class="vector-272" src="img/vector-28.png" />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
